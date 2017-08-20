@@ -49,4 +49,4 @@ def initdb():
         Data.create_table()
         click.secho("Database created!", fg='green')
     else:
-        click.secho("Database file %s already exists, move or delete and retry." fg='red', bold=True)
+        click.secho("Database file %s already exists, move or delete and retry.", fg='red', bold=True)
