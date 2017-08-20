@@ -22,6 +22,7 @@ class Data(peewee.Model):
 @click.pass_context
 def cli(ctx):
 
+    click.echo("WTF")
     click.secho(str(ctx.invoked_subcommand), fg='cyan')
     if ctx.invoked_subcommand is None:
         collect()
