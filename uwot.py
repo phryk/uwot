@@ -27,11 +27,11 @@ def cli(ctx):
     click.echo("WTF")
     click.secho(str(ctx.invoked_subcommand), fg='cyan')
     if ctx.invoked_subcommand is None:
-        collect()
+        collect(0)
 
 
 @cli.command()
-@click.argument('value', prompt="Value", default=0)
+@click.option('value', prompt="Value", default=0)
 def collect(value):
 
     datapoint = Data()
