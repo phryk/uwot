@@ -16,6 +16,9 @@ db = peewee.SqliteDatabase(db_path)
 
 class Data(peewee.Model):
 
+    class Meta:
+        database = db
+
     date = peewee.DateTimeField(default=datetime.datetime.now)
     value = peewee.IntegerField()
 
