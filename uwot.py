@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+""" Generic value over time thingie. """
+
 import os
 import datetime
 import click
@@ -29,7 +31,7 @@ def cli(ctx):
 
 
 @cli.command()
-@click.argument('value', type=int)
+@click.options('value', prompt="Value", type=int)
 def collect(value):
 
     datapoint = Data()
