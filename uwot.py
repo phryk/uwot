@@ -31,7 +31,7 @@ def cli(ctx):
 
 
 @cli.command()
-@click.options('value', prompt="Value", type=int)
+@click.option('value', prompt="Value", type=int)
 def collect(value):
 
     datapoint = Data()
